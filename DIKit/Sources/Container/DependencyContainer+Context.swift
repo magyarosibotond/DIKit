@@ -14,9 +14,6 @@ extension DependencyContainer {
     /// - Parameters:
     ///     - by: *DependencyContainer* the root `DependencyContainer`
     public static func defined(by root: DependencyContainer) {
-        guard self.root == nil else {
-            fatalError("It is not allowed to override the `root` DependencyContainer at runtime.")
-        }
         self.root = root
     }
 }
